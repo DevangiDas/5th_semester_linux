@@ -1,0 +1,2 @@
+while [ 1 ]; do while LD_LIBRARY_PATH=g++/lib g++/bin/chokidar -qe modify . > /dev/null; do sleep 1; g++/bin/g++ -O2 $1.cpp -o $1.bin -L g++/lib -lcpp -Wno-return-type -w -Wfatal-errors && ./$1.bin; echo "________________________________________"; done; done
+
