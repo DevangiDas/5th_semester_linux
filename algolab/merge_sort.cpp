@@ -2,7 +2,7 @@
 
 int main()
 	{
-	_ arr = random(10000,10000);
+	_ arr = random(10,10000);
 	print("INPUT ARRAY:", arr);
 	_ count = 0;
 	

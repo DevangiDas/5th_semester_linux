@@ -2,7 +2,7 @@
 
 int main()
 {	
-	_ arr = random(1000,1000);
+	_ arr = random(10,1000);
 	_ copy = arr;
 	print("INPUT:",arr);
 	_ count = 0;
